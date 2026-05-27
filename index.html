@@ -3,1692 +3,937 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Green Plumber — Premium Plumbing Services</title>
+  <title>Allan Frank Plumbing, Heating & Cooling | Long Beach, CA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    /* =====================================================
-       GLOBAL RESET & CORE SETUP
-    ===================================================== */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg-main:        #fbfaf7;
-      --bg-warm:        #f5f3ec;
-      --bg-card:        #ffffff;
-      --bg-hero-right:  #f2f0e8;
-      --bg-dark:        #1e2022;
-      --text-primary:   #1e2022;
-      --text-body:      #4a4d5e;
-      --text-muted:     #8e90a0;
-      --text-light:     #b8b9c8;
-      --copper:         #ce7d55;
-      --copper-dark:    #b8683f;
-      --copper-light:   rgba(206, 125, 85, 0.10);
-      --copper-glow:    rgba(206, 125, 85, 0.20);
-      --sage:           #607466;
-      --sage-light:     rgba(96, 116, 102, 0.08);
-      --sage-mid:       rgba(96, 116, 102, 0.15);
-      --gold:           #c9963a;
-      --border:         rgba(30, 32, 34, 0.08);
-      --border-warm:    rgba(206, 125, 85, 0.18);
-      --shadow-xs:      0 2px 8px rgba(0,0,0,0.04);
-      --shadow-sm:      0 4px 20px rgba(0,0,0,0.05);
-      --shadow-md:      0 8px 40px rgba(0,0,0,0.07);
-      --shadow-lg:      0 20px 60px rgba(0,0,0,0.09);
-      --shadow-copper:  0 8px 32px rgba(206,125,85,0.28);
-      --radius-sm:      10px;
-      --radius-md:      16px;
-      --radius-lg:      24px;
-      --radius-xl:      32px;
-      --radius-pill:    100px;
-      --font-serif:     'Playfair Display', Georgia, serif;
-      --font-sans:      'Plus Jakarta Sans', sans-serif;
-      --ease:           cubic-bezier(0.4, 0, 0.2, 1);
-      --ease-out:       cubic-bezier(0, 0, 0.2, 1);
-      --transition:     0.28s var(--ease);
+      --ivory: #fbfaf7;
+      --navy: #1a365d;
+      --navy-mid: #1e4080;
+      --navy-light: #2a5298;
+      --gold: #d97706;
+      --gold-light: #f59e0b;
+      --charcoal: #2d3748;
+      --cream: #f0eee9;
+      --cream-dark: #e8e5de;
+      --smoke: #9aa5b4;
+      --white: #ffffff;
+      --ff-serif: 'Playfair Display', Georgia, serif;
+      --ff-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --shadow-sm: 0 2px 12px rgba(26,54,93,0.08);
+      --shadow-md: 0 8px 40px rgba(26,54,93,0.13);
+      --shadow-lg: 0 20px 60px rgba(26,54,93,0.18);
+      --shadow-gold: 0 8px 30px rgba(217,119,6,0.35);
     }
 
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      background-color: var(--bg-main);
-      color: var(--text-body);
-      font-family: var(--font-sans);
-      font-weight: 400;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-family: var(--ff-sans);
+      background-color: var(--ivory);
+      color: var(--charcoal);
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: var(--bg-warm); }
-    ::-webkit-scrollbar-thumb { background: #d4c9b8; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--copper); }
-
-    :focus-visible {
-      outline: 2px solid var(--copper);
-      outline-offset: 3px;
-      border-radius: 4px;
+    /* ── HEADER ──────────────────────────────────────────── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(251,250,247,0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(26,54,93,0.08);
+      padding: 0 5vw;
     }
-
-    a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    button { font-family: var(--font-sans); cursor: pointer; border: none; background: none; }
-
-    /* =====================================================
-       TYPOGRAPHY SYSTEM
-    ===================================================== */
-    .serif { font-family: var(--font-serif); }
-
-    h1, h2, h3 {
-      font-family: var(--font-serif);
-      color: var(--text-primary);
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+    .header-inner {
+      max-width: 1320px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 76px; gap: 24px;
     }
-
-    /* =====================================================
-       LAYOUT UTILITIES
-    ===================================================== */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    .logo-block {}
+    .logo-name {
+      font-family: var(--ff-sans);
+      font-weight: 800; font-size: 1.2rem;
+      letter-spacing: 0.12em; color: var(--navy);
+      text-transform: uppercase; line-height: 1.1;
     }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--copper);
+    .logo-tagline {
+      font-size: 0.68rem; font-weight: 500;
+      color: var(--smoke); letter-spacing: 0.15em;
+      text-transform: uppercase; margin-top: 2px;
     }
-
-    .eyebrow::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1.5px;
-      background: var(--copper);
-      border-radius: 2px;
+    .header-trust {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--navy);
+      padding: 8px 18px; border-radius: 30px;
     }
-
-    /* =====================================================
-       NAVIGATION
-    ===================================================== */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 200;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      background: rgba(251, 250, 247, 0.88);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border);
-      transition: box-shadow var(--transition);
+    .trust-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #4ade80; flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(74,222,128,0.25);
+      animation: pulse-dot 2s infinite;
     }
-
-    .nav:hover {
-      box-shadow: 0 4px 32px rgba(0,0,0,0.06);
+    @keyframes pulse-dot {
+      0%,100% { box-shadow: 0 0 0 3px rgba(74,222,128,0.25); }
+      50%      { box-shadow: 0 0 0 6px rgba(74,222,128,0.1);  }
     }
-
-    .nav__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .nav__logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .nav__logo-mark {
-      width: 42px;
-      height: 42px;
-      background: var(--text-primary);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .nav__logo-mark::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(206,125,85,0.4) 0%, transparent 60%);
-    }
-
-    .nav__logo-mark svg {
-      width: 22px;
-      height: 22px;
-      fill: #fff;
-      position: relative;
-      z-index: 1;
-    }
-
-    .nav__logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
-    }
-
-    .nav__logo-name {
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: var(--text-primary);
-      letter-spacing: -0.01em;
-    }
-
-    .nav__logo-sub {
-      font-size: 0.64rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    .nav__links {
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav__links a {
-      font-size: 0.88rem;
-      font-weight: 500;
-      color: var(--text-body);
-      transition: color var(--transition);
-      position: relative;
-    }
-
-    .nav__links a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--copper);
-      border-radius: 2px;
-      transition: width var(--transition);
-    }
-
-    .nav__links a:hover { color: var(--text-primary); }
-    .nav__links a:hover::after { width: 100%; }
-
-    .nav__cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--text-primary);
-      color: #fff !important;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 11px 22px;
-      border-radius: var(--radius-pill);
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-    }
-
-    .nav__cta:hover {
-      background: var(--copper) !important;
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-copper);
-      color: #fff !important;
-    }
-
-    .nav__cta::after { display: none !important; }
-
-    .nav__cta svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.85); flex-shrink: 0; }
-
-    .nav__mobile-toggle {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      padding: 8px;
-      cursor: pointer;
-    }
-
-    .nav__mobile-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: var(--transition);
-    }
-
-    @media (max-width: 860px) {
-      .nav__links { display: none; }
-      .nav__mobile-toggle { display: flex; }
-    }
-
-    @media (max-width: 480px) {
-      .nav__cta span { display: none; }
-      .nav__cta { padding: 11px; }
-    }
-
-    /* =====================================================
-       HERO — ASYMMETRIC 50/50 EDITORIAL GRID
-    ===================================================== */
-    .hero {
-      padding-top: calc(76px + clamp(4rem, 9vw, 8rem));
-      padding-bottom: clamp(5rem, 10vw, 9rem);
-      padding-left: clamp(1.5rem, 5vw, 4rem);
-      padding-right: clamp(1.5rem, 5vw, 4rem);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Background texture */
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(206,125,85,0.06) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 60% at 10% 80%, rgba(96,116,102,0.05) 0%, transparent 55%);
-      pointer-events: none;
-    }
-
-    .hero__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(3rem, 6vw, 6rem);
-      align-items: center;
-      position: relative;
-    }
-
-    /* LEFT COLUMN */
-    .hero__left {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .hero__eyebrow {
-      animation: fadeUp 0.7s var(--ease-out) both;
-    }
-
-    .hero__headline {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 700;
-      line-height: 1.12;
-      letter-spacing: -0.025em;
-      color: var(--text-primary);
-      animation: fadeUp 0.7s 0.1s var(--ease-out) both;
-    }
-
-    .hero__headline em {
-      font-style: italic;
-      color: var(--copper);
-    }
-
-    .hero__sub {
-      font-size: clamp(1rem, 1.6vw, 1.1rem);
-      color: var(--text-body);
-      line-height: 1.8;
-      max-width: 440px;
-      font-weight: 400;
-      animation: fadeUp 0.7s 0.18s var(--ease-out) both;
-    }
-
-    .hero__actions {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.26s var(--ease-out) both;
-    }
-
-    .btn-copper {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--copper);
-      color: #fff;
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 16px 34px;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 6px 28px rgba(206,125,85,0.36);
-      transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
-      border: none;
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-copper::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 50%);
-    }
-
-    .btn-copper:hover {
-      background: var(--copper-dark);
-      box-shadow: 0 10px 40px rgba(206,125,85,0.48);
-      transform: translateY(-2px);
-    }
-
-    .btn-copper svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.9); flex-shrink: 0; position: relative; }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: transparent;
-      color: var(--text-primary);
-      font-family: var(--font-sans);
-      font-weight: 500;
-      font-size: 0.9rem;
-      padding: 15px 26px;
-      border-radius: var(--radius-pill);
-      border: 1.5px solid var(--border);
-      transition: border-color var(--transition), background var(--transition), transform var(--transition);
-      cursor: pointer;
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--copper);
-      background: var(--copper-light);
-      transform: translateY(-1px);
-    }
-
-    .btn-ghost svg { width: 16px; height: 16px; fill: var(--copper); flex-shrink: 0; }
-
-    .hero__trust {
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.34s var(--ease-out) both;
-      padding-top: 0.5rem;
-    }
-
-    .trust-pill {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--text-muted);
-    }
-
-    .trust-pill svg { width: 14px; height: 14px; fill: var(--sage); flex-shrink: 0; }
-
-    /* RIGHT COLUMN — Layered Card Visual */
-    .hero__right {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2.5rem;
-      animation: fadeIn 0.9s 0.2s var(--ease-out) both;
-    }
-
-    /* Offset outline frame behind */
-    .hero__frame-outline {
-      position: absolute;
-      top: 1.2rem;
-      right: 0.8rem;
-      bottom: 0;
-      left: 2rem;
-      border: 1.5px solid rgba(206,125,85,0.22);
-      border-radius: var(--radius-xl);
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Second subtle frame */
-    .hero__frame-fill {
-      position: absolute;
-      top: 2.8rem;
-      right: -0.2rem;
-      bottom: -0.8rem;
-      left: 0.8rem;
-      background: var(--bg-warmer, #eeeae0);
-      border-radius: var(--radius-xl);
-      z-index: 0;
-      opacity: 0.55;
-    }
-
-    .hero__card {
-      position: relative;
-      z-index: 1;
-      background: var(--bg-hero-right);
-      border-radius: var(--radius-xl);
-      padding: clamp(2rem, 4vw, 3rem);
-      width: 100%;
-      max-width: 460px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid rgba(255,255,255,0.7);
-    }
-
-    .hero__card-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      background: rgba(206,125,85,0.10);
-      border: 1px solid rgba(206,125,85,0.18);
-      color: var(--copper);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: var(--radius-pill);
-      margin-bottom: 1.4rem;
-    }
-
-    .hero__card-tag::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--copper);
-      animation: pulse 2s ease infinite;
-    }
-
-    @keyframes pulse {
-      0%,100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.75); }
-    }
-
-    .hero__card-title {
-      font-family: var(--font-serif);
-      font-size: clamp(1.4rem, 2.5vw, 1.75rem);
-      font-weight: 700;
-      color: var(--text-primary);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero__card-body {
-      font-size: 0.9rem;
-      color: var(--text-body);
-      line-height: 1.75;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero__card-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--border);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      margin-bottom: 1.6rem;
-    }
-
-    .stat-cell {
-      background: rgba(255,255,255,0.6);
-      padding: 1.1rem 1.2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
-    .stat-cell:nth-child(1) { border-radius: var(--radius-md) 0 0 0; }
-    .stat-cell:nth-child(2) { border-radius: 0 var(--radius-md) 0 0; }
-    .stat-cell:nth-child(3) { border-radius: 0 0 0 var(--radius-md); }
-    .stat-cell:nth-child(4) { border-radius: 0 0 var(--radius-md) 0; }
-
-    .stat-cell__number {
-      font-family: var(--font-serif);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      line-height: 1;
-    }
-
-    .stat-cell__label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      letter-spacing: 0.04em;
-    }
-
-    .hero__card-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      width: 100%;
-      justify-content: center;
-      background: var(--text-primary);
-      color: #fff;
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.9rem;
-      padding: 14px 24px;
-      border-radius: var(--radius-pill);
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      border: none;
-      cursor: pointer;
-    }
-
-    .hero__card-cta:hover {
-      background: var(--copper);
-      transform: translateY(-1px);
-      box-shadow: var(--shadow-copper);
-    }
-
-    .hero__card-cta svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.8); }
-
-    @media (max-width: 860px) {
-      .hero__inner { grid-template-columns: 1fr; }
-      .hero__right { display: none; }
-    }
-
-    /* =====================================================
-       SERVICES — BROKEN GRID SHOWCASE
-    ===================================================== */
-    .services {
-      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
-      position: relative;
-    }
-
-    .services::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-warm) 40%, var(--bg-warm) 60%, var(--bg-main) 100%);
-      z-index: -1;
-    }
-
-    .services__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .services__header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 2rem;
-      margin-bottom: clamp(3rem, 6vw, 5rem);
-      flex-wrap: wrap;
-    }
-
-    .services__header-left { max-width: 480px; }
-
-    .services__title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      margin-top: 0.6rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .services__sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-    }
-
-    .services__link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--copper);
-      transition: gap var(--transition);
+    .trust-text {
+      font-size: 0.72rem; font-weight: 600;
+      color: rgba(255,255,255,0.9); letter-spacing: 0.04em;
       white-space: nowrap;
     }
+    .header-phone {
+      font-family: var(--ff-sans);
+      font-weight: 700; font-size: 1.05rem;
+      color: var(--navy); text-decoration: none;
+      letter-spacing: -0.01em;
+      transition: color .2s;
+    }
+    .header-phone:hover { color: var(--gold); }
 
-    .services__link:hover { gap: 14px; }
-    .services__link svg { width: 16px; height: 16px; fill: var(--copper); }
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      max-width: 1320px; margin: 0 auto;
+      padding: 100px 5vw 120px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+    }
+    .hero-left { position: relative; }
 
-    /* Broken grid: 3 cards, middle offset down */
-    .services__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: clamp(1.2rem, 2.5vw, 2rem);
-      align-items: start;
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 28px; height: 2px; background: var(--gold);
     }
 
-    .service-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: clamp(1.8rem, 3.5vw, 2.5rem);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-      transition: transform 0.32s var(--ease), box-shadow 0.32s var(--ease), border-color 0.28s var(--ease);
-      position: relative;
+    .hero-heading {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+      font-weight: 700; line-height: 1.1;
+      color: var(--navy); letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .hero-heading em {
+      font-style: italic; color: var(--navy-light);
+    }
+
+    /* specialty badge */
+    .specialty-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--navy);
+      color: var(--white); border-left: 4px solid var(--gold);
+      padding: 14px 22px; border-radius: 10px;
+      margin-bottom: 28px; font-size: 0.82rem;
+      font-weight: 700; letter-spacing: 0.05em;
+      text-transform: uppercase; box-shadow: var(--shadow-md);
+    }
+    .specialty-badge svg { flex-shrink: 0; }
+
+    .hero-sub {
+      font-size: 1.05rem; font-weight: 400; line-height: 1.75;
+      color: var(--charcoal); opacity: 0.82;
+      margin-bottom: 42px; max-width: 480px;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--gold); color: var(--white);
+      padding: 18px 36px; border-radius: 30px;
+      font-family: var(--ff-sans); font-size: 1rem;
+      font-weight: 700; letter-spacing: 0.02em;
+      text-decoration: none; cursor: pointer; border: none;
+      box-shadow: var(--shadow-gold);
+      transition: transform .25s, box-shadow .25s, background .2s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 40px rgba(217,119,6,0.45);
+    }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary svg { transition: transform .25s; }
+    .btn-primary:hover svg { transform: translateX(4px); }
+
+    /* hero right visual */
+    .hero-right { position: relative; }
+
+    .hero-card-frame {
+      position: absolute;
+      top: 20px; right: -18px;
+      width: calc(100% - 10px);
+      height: calc(100% - 10px);
+      border: 2px solid rgba(26,54,93,0.15);
+      border-radius: 28px;
+      pointer-events: none; z-index: 0;
+    }
+    .hero-card {
+      position: relative; z-index: 1;
+      background: var(--cream);
+      border-radius: 24px;
+      padding: 44px 40px;
+      box-shadow: var(--shadow-md);
       overflow: hidden;
     }
-
-    /* Middle card offset down */
-    .service-card:nth-child(2) {
-      transform: translateY(30px);
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px) !important;
-      box-shadow: var(--shadow-md);
-      border-color: var(--border-warm);
-    }
-
-    .service-card::before {
+    .hero-card::before {
       content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--copper) 0%, transparent 100%);
-      opacity: 0;
-      transition: opacity var(--transition);
+      position: absolute; top: 0; right: 0;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle at top right, rgba(26,54,93,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-card-label {
+      font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--smoke); margin-bottom: 30px;
+    }
+    .stat-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 28px; margin-bottom: 32px;
+    }
+    .stat-item {}
+    .stat-number {
+      font-family: var(--ff-serif);
+      font-size: 2.8rem; font-weight: 700;
+      color: var(--navy); line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-desc {
+      font-size: 0.8rem; font-weight: 500;
+      color: var(--charcoal); opacity: 0.65;
+      line-height: 1.4;
+    }
+    .hero-divider {
+      height: 1px;
+      background: linear-gradient(to right, rgba(26,54,93,0.15), transparent);
+      margin-bottom: 28px;
+    }
+    .coverage-label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--smoke); margin-bottom: 12px;
+    }
+    .coverage-tags {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .tag {
+      background: var(--white); border: 1px solid rgba(26,54,93,0.12);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 0.75rem; font-weight: 600; color: var(--navy);
+    }
+    .avail-strip {
+      margin-top: 28px; display: flex; align-items: center; gap: 10px;
+      background: rgba(26,54,93,0.05);
+      border-radius: 10px; padding: 12px 16px;
+    }
+    .avail-icon { font-size: 1.2rem; }
+    .avail-text {
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--navy); line-height: 1.3;
+    }
+    .avail-sub { font-weight: 400; opacity: 0.7; }
+
+    /* ── MARQUEE STRIP ───────────────────────────────────── */
+    .marquee-strip {
+      background: var(--navy); overflow: hidden;
+      padding: 16px 0; position: relative;
+    }
+    .marquee-track {
+      display: flex; gap: 0;
+      animation: marquee 28s linear infinite;
+      width: max-content;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .marquee-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 36px; white-space: nowrap;
+      font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+    }
+    .marquee-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
     }
 
-    .service-card:hover::before { opacity: 1; }
-
-    .service-card__number {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      font-weight: 800;
-      color: rgba(30,32,34,0.06);
-      line-height: 1;
-      margin-bottom: 1.2rem;
-      letter-spacing: -0.04em;
-      user-select: none;
+    /* ── SERVICES ────────────────────────────────────────── */
+    .services-section {
+      max-width: 1320px; margin: 0 auto;
+      padding: 120px 5vw;
     }
-
-    .service-card__icon {
-      width: 50px;
-      height: 50px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.4rem;
-    }
-
-    .service-card__icon--copper { background: rgba(206,125,85,0.10); }
-    .service-card__icon--sage   { background: rgba(96,116,102,0.09); }
-    .service-card__icon--dark   { background: rgba(30,32,34,0.06); }
-
-    .service-card__icon svg { width: 24px; height: 24px; }
-    .service-card__icon--copper svg { fill: var(--copper); }
-    .service-card__icon--sage   svg { fill: var(--sage); }
-    .service-card__icon--dark   svg { fill: var(--text-primary); }
-
-    .service-card__title {
-      font-size: 1.22rem;
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: 0.65rem;
-      letter-spacing: -0.01em;
-    }
-
-    .service-card__desc {
-      font-size: 0.9rem;
-      color: var(--text-body);
-      line-height: 1.75;
-      margin-bottom: 1.6rem;
-    }
-
-    .service-card__footer {
-      display: flex;
-      align-items: center;
+    .section-header {
+      display: flex; align-items: flex-end;
       justify-content: space-between;
-      padding-top: 1.2rem;
-      border-top: 1px solid var(--border);
+      margin-bottom: 70px; gap: 30px;
+    }
+    .section-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-eyebrow::before {
+      content: ''; display: block;
+      width: 28px; height: 2px; background: var(--gold);
+    }
+    .section-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      font-weight: 700; color: var(--navy);
+      line-height: 1.15; letter-spacing: -0.02em;
+    }
+    .section-sub {
+      font-size: 0.95rem; font-weight: 400;
+      color: var(--charcoal); opacity: 0.65;
+      max-width: 320px; line-height: 1.7;
+      text-align: right;
     }
 
-    .service-card__link {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--copper);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap var(--transition);
+    /* broken grid cards */
+    .cards-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px; align-items: start;
     }
-
-    .service-card__link:hover { gap: 10px; }
-    .service-card__link svg { width: 13px; height: 13px; fill: var(--copper); }
-
-    .service-card__badge {
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 42px 36px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(26,54,93,0.06);
+      transition: transform .3s, box-shadow .3s;
+      position: relative; overflow: hidden;
     }
-
-    .badge-emergency {
-      background: rgba(206,125,85,0.10);
-      color: var(--copper);
-    }
-
-    .badge-same-day {
-      background: var(--green-light, rgba(96,116,102,0.09));
-      color: var(--sage);
-    }
-
-    @media (max-width: 700px) {
-      .services__grid { grid-template-columns: 1fr; }
-      .service-card:nth-child(2) { transform: none; }
-      .service-card:hover { transform: translateY(-4px) !important; }
-    }
-
-    /* =====================================================
-       CONTACT FORM — FLOATING OVERLAP SLICE
-    ===================================================== */
-    .contact-slice {
-      background: var(--bg-dark);
-      padding: clamp(8rem, 15vw, 14rem) clamp(1.5rem, 5vw, 4rem) clamp(5rem, 10vw, 9rem);
-      position: relative;
-    }
-
-    /* Top curve */
-    .contact-slice::before {
+    .service-card::after {
       content: '';
-      position: absolute;
-      top: -1px; left: 0; right: 0;
-      height: clamp(3rem, 6vw, 5rem);
-      background: var(--bg-main);
-      clip-path: ellipse(55% 100% at 50% 0%);
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(to right, var(--gold), var(--navy));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .35s;
+    }
+    .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-card.offset { transform: translateY(30px); }
+    .service-card.offset:hover { transform: translateY(22px); }
+
+    .card-icon-wrap {
+      width: 56px; height: 56px; border-radius: 14px;
+      background: rgba(26,54,93,0.06);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 28px; font-size: 1.6rem;
+      transition: background .3s;
+    }
+    .service-card:hover .card-icon-wrap { background: rgba(217,119,6,0.1); }
+    .card-title {
+      font-family: var(--ff-serif);
+      font-size: 1.4rem; font-weight: 700;
+      color: var(--navy); line-height: 1.25;
+      margin-bottom: 14px;
+    }
+    .card-body {
+      font-size: 0.9rem; line-height: 1.75;
+      color: var(--charcoal); opacity: 0.72;
+      margin-bottom: 28px;
+    }
+    .card-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.82rem; font-weight: 700;
+      color: var(--navy); text-decoration: none;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 2px;
+      transition: color .2s, gap .2s;
+    }
+    .card-link:hover { color: var(--gold); gap: 10px; }
+
+    /* ── CONTACT / FORM SECTION ──────────────────────────── */
+    .contact-outer {
+      background: var(--navy);
+      padding: 0 5vw 0;
+      position: relative;
+    }
+    .contact-outer::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 120px;
+      background: var(--ivory);
+      clip-path: ellipse(56% 100% at 50% 0%);
     }
 
-    .contact-slice__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: clamp(3rem, 6vw, 7rem);
-      align-items: start;
+    .contact-wrapper {
+      max-width: 1320px; margin: 0 auto;
+      position: relative; z-index: 1;
+      padding-top: 0; padding-bottom: 120px;
     }
 
-    /* FLOATING FORM CARD */
-    .contact-form-card {
-      background: var(--bg-card);
-      border-radius: var(--radius-xl);
-      padding: clamp(2.2rem, 5vw, 3.2rem);
-      box-shadow: 0 32px 80px rgba(0,0,0,0.22);
+    .contact-card {
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      padding: 70px 72px;
       margin-top: -50px;
-      position: relative;
-      z-index: 2;
-      border: 1px solid rgba(255,255,255,0.9);
+      display: grid; grid-template-columns: 1fr 1.4fr;
+      gap: 80px; align-items: start;
     }
 
-    .contact-form-card .eyebrow { margin-bottom: 0.6rem; }
-
-    .contact-form-title {
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
-      font-weight: 700;
-      color: var(--text-primary);
-      line-height: 1.2;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
+    .contact-info {}
+    .contact-eyebrow {
+      font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 18px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .contact-eyebrow::before {
+      content: ''; display: block;
+      width: 28px; height: 2px; background: var(--gold);
+    }
+    .contact-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+      font-weight: 700; color: var(--navy);
+      line-height: 1.2; letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .contact-desc {
+      font-size: 0.95rem; line-height: 1.75;
+      color: var(--charcoal); opacity: 0.7;
+      margin-bottom: 36px;
+    }
+    .contact-detail-row {
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 20px;
+    }
+    .detail-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(26,54,93,0.06);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0; margin-top: 1px;
+    }
+    .detail-label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--smoke); margin-bottom: 3px;
+    }
+    .detail-value {
+      font-size: 0.95rem; font-weight: 600; color: var(--navy);
     }
 
-    .contact-form-sub {
-      font-size: 0.88rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 2.2rem;
+    /* form */
+    .contact-form-wrap {}
+    .form-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0 32px;
     }
-
-    /* Underline-only inputs */
-    .form-field {
-      position: relative;
-      margin-bottom: 1.8rem;
+    .form-group {
+      margin-bottom: 32px; position: relative;
     }
-
-    .form-field label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-      transition: color var(--transition);
+    .form-group.full { grid-column: 1 / -1; }
+    .form-label {
+      display: block; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--smoke); margin-bottom: 10px;
     }
-
-    .form-field:focus-within label {
-      color: var(--copper);
+    .form-input, .form-textarea {
+      width: 100%; background: transparent;
+      border: none; border-bottom: 2px solid rgba(26,54,93,0.15);
+      padding: 10px 0; font-family: var(--ff-sans);
+      font-size: 1rem; color: var(--charcoal);
+      outline: none; transition: border-color .25s;
+      resize: none;
     }
-
-    .form-field input,
-    .form-field textarea {
-      width: 100%;
-      background: transparent;
-      border: none;
-      border-bottom: 1.5px solid var(--border);
-      border-radius: 0;
-      padding: 8px 0 12px;
-      font-family: var(--font-sans);
-      font-size: 0.97rem;
-      font-weight: 400;
-      color: var(--text-primary);
-      outline: none;
-      transition: border-color var(--transition);
-      line-height: 1.5;
+    .form-input::placeholder, .form-textarea::placeholder {
+      color: rgba(45,55,72,0.3);
     }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder {
-      color: var(--text-light);
+    .form-input:focus, .form-textarea:focus {
+      border-color: var(--navy);
     }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-color: var(--copper);
-    }
-
-    .form-field textarea {
-      resize: vertical;
-      min-height: 90px;
-    }
-
-    .form-row-2 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 480px) {
-      .form-row-2 { grid-template-columns: 1fr; }
-    }
+    .form-textarea { min-height: 90px; line-height: 1.6; }
 
     .btn-submit {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      background: var(--copper);
-      color: #fff;
-      font-family: var(--font-sans);
-      font-weight: 600;
-      font-size: 0.97rem;
-      padding: 16px 32px;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 6px 28px rgba(206,125,85,0.34);
-      transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
-      margin-top: 0.6rem;
-      position: relative;
-      overflow: hidden;
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--navy); color: var(--white);
+      padding: 18px 36px; border-radius: 30px;
+      font-family: var(--ff-sans); font-size: 0.95rem;
+      font-weight: 700; letter-spacing: 0.02em;
+      cursor: pointer; border: none;
+      box-shadow: var(--shadow-md);
+      transition: transform .25s, box-shadow .25s, background .2s;
+      margin-top: 8px;
     }
-
-    .btn-submit::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
-    }
-
     .btn-submit:hover {
-      background: var(--copper-dark);
-      box-shadow: 0 10px 40px rgba(206,125,85,0.48);
+      background: var(--navy-light);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+    .btn-submit svg { transition: transform .25s; }
+    .btn-submit:hover svg { transform: translateX(4px); }
+
+    /* ── WHY ALLAN ───────────────────────────────────────── */
+    .why-section {
+      background: var(--navy);
+      padding: 0 5vw 120px;
+    }
+    .why-inner {
+      max-width: 1320px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+      padding-top: 100px;
+    }
+    .why-left .section-eyebrow { color: var(--gold-light); }
+    .why-left .section-eyebrow::before { background: var(--gold-light); }
+    .why-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      font-weight: 700; color: var(--white);
+      line-height: 1.15; letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .why-body {
+      font-size: 1rem; line-height: 1.8;
+      color: rgba(255,255,255,0.6); margin-bottom: 40px;
+    }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: var(--white);
+      padding: 16px 34px; border-radius: 30px;
+      border: 2px solid rgba(255,255,255,0.3);
+      font-family: var(--ff-sans); font-size: 0.95rem;
+      font-weight: 700; cursor: pointer;
+      text-decoration: none;
+      transition: border-color .2s, background .2s, transform .2s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      background: rgba(217,119,6,0.1);
       transform: translateY(-2px);
     }
 
-    .btn-submit svg { width: 18px; height: 18px; fill: rgba(255,255,255,0.9); position: relative; }
-
-    .form-secure-note {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 1rem;
-      font-size: 0.75rem;
-      color: var(--text-muted);
+    .why-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px;
     }
-
-    .form-secure-note svg { width: 12px; height: 12px; fill: var(--sage); }
-
-    /* RIGHT COLUMN — Dark side copy */
-    .contact-info {
-      padding-top: 1rem;
-      color: rgba(255,255,255,0.65);
+    .why-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px; padding: 28px;
+      transition: background .25s, border-color .25s;
     }
-
-    .contact-info .eyebrow { color: var(--copper); }
-    .contact-info .eyebrow::before { background: var(--copper); }
-
-    .contact-info__title {
-      font-family: var(--font-serif);
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.025em;
-      line-height: 1.15;
-      margin: 0.8rem 0 1.2rem;
+    .why-card:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(217,119,6,0.4);
     }
-
-    .contact-info__title em {
-      font-style: italic;
-      color: var(--copper);
+    .why-card-icon {
+      font-size: 1.6rem; margin-bottom: 14px; display: block;
     }
-
-    .contact-info__body {
-      font-size: 0.95rem;
-      line-height: 1.8;
-      margin-bottom: 2.8rem;
+    .why-card-title {
+      font-family: var(--ff-serif);
+      font-size: 1.1rem; font-weight: 600;
+      color: var(--white); margin-bottom: 8px;
+    }
+    .why-card-body {
+      font-size: 0.82rem; line-height: 1.65;
       color: rgba(255,255,255,0.5);
     }
 
-    .contact-info__items {
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      background: #0f2240;
+      padding: 60px 5vw 36px;
+    }
+    .footer-inner {
+      max-width: 1320px; margin: 0 auto;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px; margin-bottom: 48px;
+    }
+    .footer-brand .logo-name { color: var(--white); }
+    .footer-brand .logo-tagline { color: rgba(255,255,255,0.4); }
+    .footer-tagline {
+      font-size: 0.88rem; line-height: 1.7;
+      color: rgba(255,255,255,0.45);
+      margin-top: 18px; max-width: 300px;
+    }
+    .footer-col-title {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 20px;
+    }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 11px; }
+    .footer-links a {
+      font-size: 0.88rem; color: rgba(255,255,255,0.5);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+    .footer-divider {
+      height: 1px; background: rgba(255,255,255,0.08);
+      margin-bottom: 28px;
+    }
+    .footer-bottom {
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .footer-copy {
+      font-size: 0.78rem; color: rgba(255,255,255,0.3);
+    }
+    .footer-lic {
+      font-size: 0.75rem; font-weight: 600;
+      color: rgba(255,255,255,0.4); letter-spacing: 0.05em;
     }
 
-    .contact-info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; padding: 80px 5vw 90px; }
+      .hero-right { display: none; }
+      .cards-grid { grid-template-columns: 1fr; gap: 24px; }
+      .service-card.offset { transform: translateY(0); }
+      .service-card.offset:hover { transform: translateY(-8px); }
+      .contact-card { grid-template-columns: 1fr; gap: 50px; padding: 48px 40px; }
+      .why-inner { grid-template-columns: 1fr; gap: 50px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
     }
-
-    .contact-info-item__icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .contact-info-item__icon svg { width: 20px; height: 20px; fill: var(--copper); }
-
-    .contact-info-item__label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.35);
-      margin-bottom: 3px;
-    }
-
-    .contact-info-item__value {
-      font-size: 0.97rem;
-      font-weight: 500;
-      color: rgba(255,255,255,0.8);
-      line-height: 1.5;
-    }
-
-    @media (max-width: 860px) {
-      .contact-slice__inner {
-        grid-template-columns: 1fr;
-      }
-      .contact-info { order: -1; }
-      .contact-form-card { margin-top: 0; }
-    }
-
-    /* =====================================================
-       TESTIMONIALS
-    ===================================================== */
-    .testimonials {
-      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
-      background: var(--bg-main);
-    }
-
-    .testimonials__inner { max-width: 1200px; margin: 0 auto; }
-
-    .testimonials__header {
-      text-align: center;
-      margin-bottom: clamp(3rem, 6vw, 5rem);
-    }
-
-    .testimonials__title {
-      font-size: clamp(1.9rem, 3.8vw, 2.8rem);
-      font-weight: 700;
-      margin-top: 0.6rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .testimonials__sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-    }
-
-    .testimonials__grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-      gap: 1.4rem;
-    }
-
-    .testimonial-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: clamp(1.6rem, 3.5vw, 2.2rem);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-      transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color var(--transition);
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--border-warm);
-    }
-
-    .testimonial-card__top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .stars { display: flex; gap: 3px; }
-    .stars svg { width: 15px; height: 15px; fill: var(--gold); }
-
-    .verified {
-      font-size: 0.68rem;
-      font-weight: 600;
-      background: var(--green-light, rgba(96,116,102,0.09));
-      color: var(--sage);
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
-      letter-spacing: 0.04em;
-    }
-
-    .testimonial-card__quote {
-      font-size: 0.92rem;
-      line-height: 1.78;
-      color: var(--text-body);
-      flex: 1;
-      font-style: italic;
-    }
-
-    .testimonial-card__author {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding-top: 1.1rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .author-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #e8d8cc, #d4b8a0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--copper);
-      flex-shrink: 0;
-      border: 2px solid rgba(206,125,85,0.14);
-    }
-
-    .author-name {
-      font-weight: 600;
-      font-size: 0.88rem;
-      color: var(--text-primary);
-    }
-
-    .author-loc {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      margin-top: 1px;
-    }
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-    .footer {
-      background: var(--bg-dark);
-      padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
-    }
-
-    .footer__inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer__top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      padding-bottom: 2.5rem;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .footer__brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .footer__brand-mark {
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.08);
-      border-radius: 11px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer__brand-mark svg { width: 20px; height: 20px; fill: var(--copper); }
-
-    .footer__brand-name {
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #fff;
-    }
-
-    .footer__brand-sub {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
-    }
-
-    .footer__phone {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      background: rgba(206,125,85,0.12);
-      border: 1px solid rgba(206,125,85,0.2);
-      color: var(--copper);
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 12px 22px;
-      border-radius: var(--radius-pill);
-      transition: background var(--transition), transform var(--transition);
-    }
-
-    .footer__phone:hover {
-      background: rgba(206,125,85,0.2);
-      transform: translateY(-1px);
-    }
-
-    .footer__phone svg { width: 16px; height: 16px; fill: var(--copper); }
-
-    .footer__bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer__copy {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.25);
-    }
-
-    .footer__copy a { color: var(--copper); }
-
-    .footer__links {
-      display: flex;
-      gap: 1.8rem;
-      flex-wrap: wrap;
-    }
-
-    .footer__links a {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.3);
-      transition: color var(--transition);
-    }
-
-    .footer__links a:hover { color: rgba(255,255,255,0.7); }
-
-    /* =====================================================
-       KEYFRAME ANIMATIONS
-    ===================================================== */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+    @media (max-width: 640px) {
+      .header-phone { display: none; }
+      .hero-heading { font-size: 2.2rem; }
+      .contact-card { padding: 36px 28px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .btn-primary, .btn-submit { font-size: 0.9rem; padding: 16px 28px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- ================================================
-       NAVIGATION
-  ================================================ -->
-  <header class="nav" role="banner">
-    <div class="nav__inner">
-      <a href="#" class="nav__logo" aria-label="The Green Plumber">
-        <div class="nav__logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21h3.09c.56-1.24 1.16-2.44 2.09-3h12V8h-4zm-4 7c-1.11 0-2-.89-2-2s.89-2 2-2 2 .89 2 2-.89 2-2 2z"/></svg>
-        </div>
-        <div class="nav__logo-text">
-          <span class="nav__logo-name">The Green Plumber</span>
-          <span class="nav__logo-sub">Est. 1994 · Long Beach</span>
-        </div>
-      </a>
-
-      <nav aria-label="Primary navigation">
-        <ul class="nav__links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li>
-            <a href="tel:+15625550192" class="nav__cta" aria-label="Call (562) 555-0192">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-              <span>(562) 555-0192</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="nav__mobile-toggle" role="button" aria-label="Open menu" tabindex="0">
-        <span></span><span></span><span></span>
+  <!-- ░░ HEADER ░░ -->
+  <header>
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-name">Allan Frank</div>
+        <div class="logo-tagline">Plumbing &bull; Heating &bull; Cooling</div>
       </div>
+      <div class="header-trust">
+        <div class="trust-dot"></div>
+        <span class="trust-text">CA State Lic. No. 765467 &nbsp;|&nbsp; Fully Licensed &amp; Insured</span>
+      </div>
+      <a href="tel:+15551234567" class="header-phone">(555) 123-4567</a>
     </div>
   </header>
 
-  <main>
-
-    <!-- ================================================
-         HERO — ASYMMETRIC EDITORIAL
-    ================================================ -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero__inner">
-
-        <!-- Left Column -->
-        <div class="hero__left">
-          <span class="eyebrow hero__eyebrow">24/7 Emergency Dispatch</span>
-
-          <h1 class="hero__headline" id="hero-heading">
-            Honest Craftsmanship.<br>
-            Fair Rates.<br>
-            <em>Treating your home<br>like our own.</em>
-          </h1>
-
-          <p class="hero__sub">
-            Family owned and locally operated since 1994. When something goes wrong, a licensed technician is dispatched to your door no hidden fees, no high-pressure sales, just the fix done right.
-          </p>
-
-          <div class="hero__actions">
-            <a href="#contact" class="btn-copper" aria-label="Schedule dispatched plumbing service">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"/></svg>
-              Schedule Dispatched Service
-            </a>
-            <a href="tel:+15625550192" class="btn-ghost" aria-label="Call us now">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-              Call Now
-            </a>
-          </div>
-
-          <div class="hero__trust" role="list">
-            <div class="trust-pill" role="listitem">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              Licensed and Insured
-            </div>
-            <div class="trust-pill" role="listitem">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              No Hidden Fees
-            </div>
-            <div class="trust-pill" role="listitem">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-              60-Min Response
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column — Layered Visual Card -->
-        <div class="hero__right" aria-hidden="true">
-          <div class="hero__frame-fill"></div>
-          <div class="hero__frame-outline"></div>
-          <div class="hero__card">
-            <div class="hero__card-tag">Dispatch Active Now</div>
-            <h2 class="hero__card-title">Your neighborhood plumber, on call around the clock.</h2>
-            <p class="hero__card-body">
-              We're not a national franchise. We're your neighbors and we treat every job like it's our own home at stake.
-            </p>
-            <div class="hero__card-stats" role="list">
-              <div class="stat-cell" role="listitem">
-                <span class="stat-cell__number">20+</span>
-                <span class="stat-cell__label">Years Serving LB</span>
-              </div>
-              <div class="stat-cell" role="listitem">
-                <span class="stat-cell__number">1,400+</span>
-                <span class="stat-cell__label">Jobs Completed</span>
-              </div>
-              <div class="stat-cell" role="listitem">
-                <span class="stat-cell__number">4.9★</span>
-                <span class="stat-cell__label">Avg. Review Score</span>
-              </div>
-              <div class="stat-cell" role="listitem">
-                <span class="stat-cell__number">60min</span>
-                <span class="stat-cell__label">Response Guarantee</span>
-              </div>
-            </div>
-            <button class="hero__card-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-              Request a Technician
-            </button>
-          </div>
-        </div>
-
+  <!-- ░░ HERO ░░ -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Serving Long Beach Since 1998</div>
+      <h1 class="hero-heading">Long Beach Plumbing &amp; <em>Cooling Experts</em> Since 1998.</h1>
+      <div class="specialty-badge">
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        SPECIALTY: Copper Repipe Your Home In Just 1 Day
       </div>
-    </section>
-
-    <!-- ================================================
-         SERVICES — BROKEN GRID
-    ================================================ -->
-    <section class="services" id="services" aria-labelledby="services-heading">
-      <div class="services__inner">
-        <div class="services__header">
-          <div class="services__header-left">
-            <span class="eyebrow">What We Do</span>
-            <h2 class="services__title" id="services-heading">Every job, handled with care.</h2>
-            <p class="services__sub">From burst pipes to annual maintenance our certified technicians bring expertise and honesty to every service call.</p>
+      <p class="hero-sub">Honest, professional, and affordable service across Los Angeles and Orange Counties. Up-front pricing, zero overtime fees, and absolutely no travel charges.</p>
+      <a href="#contact" class="btn-primary">
+        Schedule Emergency Service
+        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card-frame"></div>
+      <div class="hero-card">
+        <div class="hero-card-label">Why Customers Trust Us</div>
+        <div class="stat-row">
+          <div class="stat-item">
+            <div class="stat-number">26+</div>
+            <div class="stat-desc">Years serving LA &amp; OC communities</div>
           </div>
-          <a href="#contact" class="services__link" aria-label="View all services">
-            All Services
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-          </a>
+          <div class="stat-item">
+            <div class="stat-number">5K+</div>
+            <div class="stat-desc">Satisfied homes &amp; businesses served</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">$0</div>
+            <div class="stat-desc">Overtime charges, ever</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">1 Day</div>
+            <div class="stat-desc">Full copper repipe completion</div>
+          </div>
         </div>
-
-        <div class="services__grid" role="list">
-
-          <article class="service-card" role="listitem">
-            <div class="service-card__number" aria-hidden="true">01</div>
-            <div class="service-card__icon service-card__icon--copper" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
-            </div>
-            <h3 class="service-card__title">Emergency Repair</h3>
-            <p class="service-card__desc">Burst pipes, flooding, gas concerns, or anything that can't wait we're dispatched within the hour, day or night, every single day of the year.</p>
-            <div class="service-card__footer">
-              <a href="#contact" class="service-card__link" aria-label="Request emergency repair service">
-                Request Now
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-              </a>
-              <span class="service-card__badge badge-emergency">24/7</span>
-            </div>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <div class="service-card__number" aria-hidden="true">02</div>
-            <div class="service-card__icon service-card__icon--sage" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M16.5 12c1.38 0 2.49-1.12 2.49-2.5L19 5l-1.5-3h-9L7 5l.01 4.5C7.01 10.88 8.12 12 9.5 12H11v2H7v2h4v4h2v-4h4v-2h-4v-2h1.5z"/></svg>
-            </div>
-            <h3 class="service-card__title">Water Heaters</h3>
-            <p class="service-card__desc">Installation and repair for traditional tank and modern tankless water heaters. We carry premium units and offer transparent same-day pricing before touching anything.</p>
-            <div class="service-card__footer">
-              <a href="#contact" class="service-card__link" aria-label="Get a water heater estimate">
-                Get Estimate
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-              </a>
-              <span class="service-card__badge badge-same-day">Same Day</span>
-            </div>
-          </article>
-
-          <article class="service-card" role="listitem">
-            <div class="service-card__number" aria-hidden="true">03</div>
-            <div class="service-card__icon service-card__icon--dark" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M17.5 12A5.5 5.5 0 0 1 12 17.5 5.5 5.5 0 0 1 6.5 12 5.5 5.5 0 0 1 12 6.5 5.5 5.5 0 0 1 17.5 12m0-9h-11C3 3 2 4 2 6.5v11C2 20 3 21 6.5 21h11c3.5 0 4.5-1 4.5-3.5v-11C22 4 21 3 17.5 3M12 19a7 7 0 0 0 7-7 7 7 0 0 0-7-7 7 7 0 0 0-7 7 7 7 0 0 0 7 7z"/></svg>
-            </div>
-            <h3 class="service-card__title">Drain Specialists</h3>
-            <p class="service-card__desc">Camera-assisted diagnostics and hydro-jet clearing for any drain in the home. We find the real source of the blockage and resolve it permanently — not with a temporary patch.</p>
-            <div class="service-card__footer">
-              <a href="#contact" class="service-card__link" aria-label="Schedule drain cleaning service">
-                Schedule Visit
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-              </a>
-              <span class="service-card__badge badge-same-day">Fixed Right</span>
-            </div>
-          </article>
-
+        <div class="hero-divider"></div>
+        <div class="coverage-label">Service Coverage</div>
+        <div class="coverage-tags">
+          <span class="tag">Long Beach</span>
+          <span class="tag">Los Angeles</span>
+          <span class="tag">Orange County</span>
+          <span class="tag">Torrance</span>
+          <span class="tag">Lakewood</span>
+          <span class="tag">Seal Beach</span>
+        </div>
+        <div class="avail-strip">
+          <span class="avail-icon">🕐</span>
+          <div class="avail-text">
+            Available 24 / 7 for emergencies<br>
+            <span class="avail-sub">Call now — no hold times, no runaround</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ================================================
-         CONTACT — FLOATING FORM SLICE
-    ================================================ -->
-    <section class="contact-slice" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-slice__inner">
+  <!-- ░░ MARQUEE ░░ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <!-- first copy -->
+      <span class="marquee-item"><span class="marquee-dot"></span>Emergency Plumbing</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Copper Repiping</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Drain Clearing</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Water Heaters</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>HVAC Diagnostics</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>AC Installation</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Furnace Repair</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Sewer Line Service</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Leak Detection</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>No Travel Charges</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Zero Overtime Fees</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Up-Front Pricing</span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item"><span class="marquee-dot"></span>Emergency Plumbing</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Copper Repiping</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Drain Clearing</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Water Heaters</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>HVAC Diagnostics</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>AC Installation</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Furnace Repair</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Sewer Line Service</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Leak Detection</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>No Travel Charges</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Zero Overtime Fees</span>
+      <span class="marquee-item"><span class="marquee-dot"></span>Up-Front Pricing</span>
+    </div>
+  </div>
 
-        <!-- Floating Form Card -->
-        <div class="contact-form-card">
-          <span class="eyebrow">Get In Touch</span>
-          <h2 class="contact-form-title" id="contact-heading">Tell us what's wrong</h2>
-          <p class="contact-form-sub">A friendly, licensed technician will reach out to you shortly usually within minutes.</p>
+  <!-- ░░ SERVICES ░░ -->
+  <section class="services-section" id="services">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Core Services</div>
+        <h2 class="section-title">Everything Your Home<br>or Business Needs</h2>
+      </div>
+      <p class="section-sub">From burst pipes at 2 AM to a full HVAC tune-up — one trusted team handles it all.</p>
+    </div>
+    <div class="cards-grid">
 
-          <form action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="card-icon-wrap">🔧</div>
+        <h3 class="card-title">Emergency Plumbing &amp; Drain Clearing</h3>
+        <p class="card-body">Burst pipes, severe leaks, backed-up drains — we respond fast, 24 hours a day, 7 days a week. No overtime surcharge, no panic premium. Just honest work at a fair price.</p>
+        <a href="#contact" class="card-link">Request Service <span>→</span></a>
+      </div>
+
+      <!-- Card 2 (offset) -->
+      <div class="service-card offset">
+        <div class="card-icon-wrap">🏠</div>
+        <h3 class="card-title">1-Day Copper Repiping</h3>
+        <p class="card-body">Replace your entire home's galvanized or polybutylene piping with premium copper — completed in a single day. Clean, code-compliant, and backed by our workmanship guarantee.</p>
+        <a href="#contact" class="card-link">Get a Free Estimate <span>→</span></a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="card-icon-wrap">❄️</div>
+        <h3 class="card-title">Heating &amp; Air Conditioning Diagnostics</h3>
+        <p class="card-body">From summer AC failures to winter furnace issues, our HVAC-certified technicians diagnose accurately and repair efficiently — keeping your family comfortable year-round.</p>
+        <a href="#contact" class="card-link">Schedule Diagnostic <span>→</span></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░ CONTACT FORM ░░ -->
+  <div class="contact-outer" id="contact">
+    <div class="contact-wrapper">
+      <div class="contact-card">
+
+        <!-- left info -->
+        <div class="contact-info">
+          <div class="contact-eyebrow">Get In Touch</div>
+          <h2 class="contact-title">Let's Fix It — Fast &amp; Right</h2>
+          <p class="contact-desc">Send your request and a dispatched technician will follow up promptly. No bots, no call centers — just Allan's team.</p>
+          <div class="contact-detail-row">
+            <div class="detail-icon">📞</div>
+            <div>
+              <div class="detail-label">Call or Text</div>
+              <div class="detail-value">(555) 123-4567</div>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="detail-icon">📍</div>
+            <div>
+              <div class="detail-label">Service Area</div>
+              <div class="detail-value">Long Beach · Los Angeles · Orange County</div>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="detail-icon">🕐</div>
+            <div>
+              <div class="detail-label">Availability</div>
+              <div class="detail-value">24 / 7 · 365 Days a Year</div>
+            </div>
+          </div>
+          <div class="contact-detail-row">
+            <div class="detail-icon">🏅</div>
+            <div>
+              <div class="detail-label">License</div>
+              <div class="detail-value">CA State Lic. No. 765467</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- right form -->
+        <div class="contact-form-wrap">
+          <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE" />
-            <input type="checkbox" name="botcheck" style="display:none;" />
+            <!-- Optional: redirect after submission -->
+            <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you"> -->
 
-            <div class="form-row-2">
-              <div class="form-field">
-                <label for="f-name">Full Name</label>
-                <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Jane Smith" required />
               </div>
-              <div class="form-field">
-                <label for="f-phone">Phone Number</label>
-                <input type="tel" id="f-phone" name="phone" placeholder="(562) 555-0100" required autocomplete="tel" />
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required />
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="jane@email.com" required />
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="issue">Describe Your Plumbing or HVAC Issue</label>
+                <textarea class="form-textarea" id="issue" name="message" placeholder="e.g. Leaking pipe under kitchen sink, no hot water, AC not cooling…" required></textarea>
               </div>
             </div>
-
-            <div class="form-field">
-              <label for="f-email">Email Address</label>
-              <input type="email" id="f-email" name="email" placeholder="jane@example.com" required autocomplete="email" />
-            </div>
-
-            <div class="form-field">
-              <label for="f-issue">Describe the Issue</label>
-              <textarea id="f-issue" name="message" placeholder="Tell us what's happening — no technical jargon needed. The more detail the better." required></textarea>
-            </div>
-
             <button type="submit" class="btn-submit">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
               Send Request to Dispatched Technician
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
             </button>
-
-            <p class="form-secure-note">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
-              Secure form — your information is never shared.
-            </p>
           </form>
         </div>
 
-        <!-- Right Info Panel -->
-        <div class="contact-info">
-          <span class="eyebrow">Reach Us Directly</span>
-          <h3 class="contact-info__title">We pick up.<br><em>Every time.</em></h3>
-          <p class="contact-info__body">
-            No automated queues, no voicemail maze. When you call ProPlumb Elite, a real person answers day or night. We built this business on trust, and that starts with being reachable.
-          </p>
-          <div class="contact-info__items">
-            <div class="contact-info-item">
-              <div class="contact-info-item__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-              </div>
-              <div>
-                <div class="contact-info-item__label">Phone; Text</div>
-                <div class="contact-info-item__value">(562) 555-0192</div>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-item__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-              </div>
-              <div>
-                <div class="contact-info-item__label">Service Area</div>
-                <div class="contact-info-item__value">Long Beach, Lakewood, Signal Hill, Carson &amp; Torrance</div>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-item__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg>
-              </div>
-              <div>
-                <div class="contact-info-item__label">Availability</div>
-                <div class="contact-info-item__value">24 hours a day, 7 days a week.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- ================================================
-         TESTIMONIALS
-    ================================================ -->
-    <section class="testimonials" id="reviews" aria-labelledby="reviews-heading">
-      <div class="testimonials__inner">
-        <div class="testimonials__header">
-          <span class="eyebrow" style="justify-content:center;">Client Stories</span>
-          <h2 class="testimonials__title" id="reviews-heading">Neighbors who trust us with their homes</h2>
-          <p class="testimonials__sub">Genuine feedback from real homeowners across the Long Beach area.</p>
-        </div>
-
-        <div class="testimonials__grid" role="list">
-
-          <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__top">
-              <div class="stars" aria-label="5 stars">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-              </div>
-              <span class="verified">Verified</span>
-            </div>
-            <p class="testimonial-card__quote">"~~~~~~~~~~~~~~~~~~~~~~~~"</p>
-            <div class="testimonial-card__author">
-              <div class="author-avatar" aria-hidden="true">MR</div>
-              <div>
-                <div class="author-name">~~~</div>
-                <div class="author-loc">Long Beach, CA — Emergency Repair</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__top">
-              <div class="stars" aria-label="5 stars">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-              </div>
-              <span class="verified">Verified</span>
-            </div>
-            <p class="testimonial-card__quote">"~~~~~~~~~~~~~~~~~~~~~~~~~~~~`"</p>
-            <div class="testimonial-card__author">
-              <div class="author-avatar" aria-hidden="true">TW</div>
-              <div>
-                <div class="author-name">~~~~~</div>
-                <div class="author-loc">Lakewood, CA — Water Heater</div>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial-card" role="listitem">
-            <div class="testimonial-card__top">
-              <div class="stars" aria-label="5 stars">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-              </div>
-              <span class="verified">Verified</span>
-            </div>
-            <p class="testimonial-card__quote">"~~~~~~~~~~~~~~~~~~~~~~~~"</p>
-            <div class="testimonial-card__author">
-              <div class="author-avatar" aria-hidden="true">DJ</div>
-              <div>
-                <div class="author-name">~~~~~</div>
-                <div class="author-loc">Signal Hill, CA — Drain Specialist</div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ================================================
-       FOOTER
-  ================================================ -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer__inner">
-      <div class="footer__top">
-        <div class="footer__brand">
-          <div class="footer__brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 21h3.09c.56-1.24 1.16-2.44 2.09-3h12V8h-4zm-4 7c-1.11 0-2-.89-2-2s.89-2 2-2 2 .89 2 2-.89 2-2 2z"/></svg>
-          </div>
-          <div>
-            <div class="footer__brand-name">The Green Plumber</div>
-            <div class="footer__brand-sub">Est. 1994 · Long Beach, CA</div>
-          </div>
-        </div>
-        <a href="tel:+15625550192" class="footer__phone" aria-label="Call (562) 555-0192">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-          (562) 555-0192
+  <!-- ░░ WHY ALLAN ░░ -->
+  <section class="why-section" id="about">
+    <div class="why-inner">
+      <div class="why-left">
+        <div class="section-eyebrow">Why Choose Us</div>
+        <h2 class="why-title">Over Two Decades of Trusted Craftsmanship</h2>
+        <p class="why-body">Since 1998, Allan Frank has built a reputation on showing up on time, charging fairly, and leaving every job cleaner than he found it. No surprise fees. No upsells. No runaround. Just the highest standard of trade work in Southern California.</p>
+        <a href="#contact" class="btn-secondary">
+          Talk to Our Team
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">
-          &copy; 2025 ProPlumb Elite. CA License #000000. &nbsp;
-          <a href="tel:+15625550192">(562) 555-0192</a>
-        </p>
-        <nav class="footer__links" aria-label="Footer links">
-          <a href="#">Privacy</a>
-          <a href="#">Licensing</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-card-icon">⚡</span>
+          <div class="why-card-title">Same-Day Response</div>
+          <div class="why-card-body">Emergency calls answered day or night. We dispatch fast so you're never left waiting with a plumbing crisis.</div>
+        </div>
+        <div class="why-card">
+          <span class="why-card-icon">💬</span>
+          <div class="why-card-title">Up-Front Pricing</div>
+          <div class="why-card-body">Every job is quoted clearly before work begins. The price you hear is the price you pay — guaranteed.</div>
+        </div>
+        <div class="why-card">
+          <span class="why-card-icon">🛡️</span>
+          <div class="why-card-title">Licensed &amp; Insured</div>
+          <div class="why-card-body">CA State Lic. No. 765467. Full liability coverage on every job so your home and investment are always protected.</div>
+        </div>
+        <div class="why-card">
+          <span class="why-card-icon">🌟</span>
+          <div class="why-card-title">No Hidden Fees</div>
+          <div class="why-card-body">Zero overtime charges, zero travel fees, zero surprises. We respect your time and your wallet — always.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-name">Allan Frank</div>
+          <div class="logo-tagline">Plumbing &bull; Heating &bull; Cooling</div>
+          <p class="footer-tagline">Proudly serving Long Beach, Los Angeles, and Orange County families and businesses since 1998. CA State Lic. No. 765467.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="#services">Emergency Plumbing</a></li>
+            <li><a href="#services">Drain Clearing</a></li>
+            <li><a href="#services">Copper Repiping</a></li>
+            <li><a href="#services">Water Heater Service</a></li>
+            <li><a href="#services">Heating &amp; Furnace</a></li>
+            <li><a href="#services">AC Diagnostics &amp; Repair</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li><a href="tel:+15551234567">(555) 123-4567</a></li>
+            <li><a href="#contact">Request Service Online</a></li>
+            <li><a href="#about">About Allan Frank</a></li>
+            <li><a href="#home">Service Areas</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2024 Allan Frank Plumbing, Heating &amp; Cooling. All rights reserved.</p>
+        <span class="footer-lic">CA State Contractor Lic. No. 765467 &nbsp;|&nbsp; Fully Licensed &amp; Insured</span>
       </div>
     </div>
   </footer>
 
-  <!-- PLACE YOUR 1-LINE VOICEFLOW CHATBOT EMBED CODE DIRECTLY HERE -->
+  <!--
+  ============================================================
+  🤖  AUTOMATED CHATBOT / LIVE CHAT SCRIPT PLACEHOLDER
+  ============================================================
+  Replace or paste your chatbot embed code below this comment.
+  Common providers: Tidio, Intercom, Drift, Crisp, LiveChat,
+  Zendesk, HubSpot, or a custom AI chat widget.
+
+  EXAMPLE (Tidio):
+  <script src="//code.tidio.co/YOUR_PUBLIC_KEY.js" async></script>
+
+  EXAMPLE (Intercom):
+  <script>
+    window.intercomSettings = { app_id: "YOUR_APP_ID" };
+    (function(){ var w=window; var ic=w.Intercom; ... })();
+  </script>
+
+  EXAMPLE (Custom AI Chatbot API):
+  <script src="/chatbot.js" data-api-key="YOUR_KEY" async></script>
+  ============================================================
+  -->
 
 </body>
 </html>
